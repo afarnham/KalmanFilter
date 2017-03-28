@@ -24,6 +24,6 @@ public protocol KalmanFilterType {
     var stateEstimatePrior: Input { get }
     var errorCovariancePrior: Input { get }
     
-    func predict(stateTransitionModel: Input, controlInputModel: Input, controlVector: Input, covarianceOfProcessNoise: Input) -> Self
-    func update(measurement: Input, observationModel: Input, covarienceOfObservationNoise: Input) -> Self
+    func predict(_ stateTransitionModel: Input, controlInputModel: Input, controlVector: Input, covarianceOfProcessNoise: Input) -> Self
+    func update(_ measurement: Input, observationModel: Input, covarienceOfObservationNoise: Input) -> Self
 }
